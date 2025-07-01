@@ -1,23 +1,22 @@
-📘 **Address Book Project – Explanation**
+📘 **LSB Steganography Project – Explanation**
 
-The Address Book is a command-line based application built entirely in the C language, designed to manage contact information like names, phone numbers, and email addresses. The core objective of this project was to create a simple, menu-driven utility that allows a user to add, view, search, edit, and delete contact records, with all data being persistently stored using file handling in C.
+This project is a command-line based implementation of LSB (Least Significant Bit) Steganography using the C programming language. The goal of the project is to hide and retrieve secret messages or files within image files (specifically BMP format), without visibly altering the image. It demonstrates how digital data can be concealed in the lowest bits of pixel values — a common technique used in digital watermarking, security, and information hiding.
 
-Under the hood, this application uses a singly linked list to dynamically manage contacts during runtime. Each contact is represented as a node in the list, containing fields for name, mobile number(s), email, etc. When the program is launched, it reads all previously saved contacts from a file into the linked list. When the user performs any operation — like adding or deleting a contact — the changes are first reflected in the list and then written back to the file.
+The encoding process involves reading the secret message or file, converting it into a binary stream, and then embedding those bits into the least significant bits of pixel data in the image. During decoding, the program extracts the embedded bits from the image and reconstructs the original message. The image quality remains visually unaffected, making the hidden data imperceptible to the human eye.
 
-The user interface is a text-based menu, where the user can:
+This project is entirely menu-driven and supports:
 
-- Add new contacts (with validation to avoid duplicates)
-- Search for existing contacts by name, phone number, or email
-- Edit the details of a specific contact
-- Delete contacts from the list
-- View all saved contacts in a formatted display
-- Exit the application, saving all changes to file
+- Encoding secret text or file into an image using LSB technique
+- Decoding the hidden message/file from the stego-image
+- Verification of image format (supports 24-bit uncompressed BMP)
+- Error handling for capacity overflow, file mismatches, and missing inputs
+- Modular file structure and separation of logic for encoding and decoding
 
-This project involved extensive use of file I/O operations (`fopen`, `fread`, `fwrite`) and pointer manipulation for linked list traversal. It also required attention to memory management, string handling, and designing clean modular functions for each operation.
+The project required deep understanding of file formats (especially BMP headers), bitwise operations, and binary data manipulation. It showcases efficient handling of byte-level operations and use of system-level programming in C to perform real-world data hiding techniques.
 
 ### 🔹 What This Project Showcases:
 
-- Strong understanding of dynamic memory allocation and data structures
-- Use of persistence in CLI applications using files
-- Ability to write clean, reusable, and modular code in C
-- Focus on real-world use cases, like managing structured records
+- Knowledge of file format parsing and binary data handling
+- Implementation of real-world steganography using bitwise manipulation
+- Strong grasp of pointers, buffers, and modular function design in C
+- Attention to security, data integrity, and command-line automation
