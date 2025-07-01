@@ -1,3 +1,5 @@
+# LSB-Steganography
+
 📘 **LSB Steganography Project – Explanation**
 
 This project is a command-line based implementation of LSB (Least Significant Bit) Steganography using the C programming language. The goal of the project is to hide and retrieve secret messages or files within image files (specifically BMP format), without visibly altering the image. It demonstrates how digital data can be concealed in the lowest bits of pixel values — a common technique used in digital watermarking, security, and information hiding.
